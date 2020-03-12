@@ -15,12 +15,12 @@ namespace ERP.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<ERPIdentityDbContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("ERPIdentityDbContextConnection")));
+              //  services.AddDbContext<ERPIdentityDbContext>(options =>
+                    //options.UseSqlServer(
+                      //  context.Configuration.GetConnectionString("ERPIdentityDbContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<ERPIdentityDbContext>();
+               // services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                   // .AddEntityFrameworkStores<ERPIdentityDbContext>();
             });
         }
     }
